@@ -1,11 +1,22 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { ExpenseContext } from './context/ExpenseContext';
 
 const AddRemove = () => {
-
     const [expense, setExpense] = useState('')
+
+    const { addTransaction } = useContext(ExpenseContext)
+
 
     const onSubmit = e => {
         e.preventDefault()
+
+        const newTransaction = {
+            id: Math.floor(Math.random() * 100000000),
+            expense: +expense
+
+        }
+        console.log(expense);
+        addTransaction(newTransaction)
     }
 
     return (

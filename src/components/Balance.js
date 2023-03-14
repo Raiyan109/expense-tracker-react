@@ -5,7 +5,8 @@ const Balance = () => {
 
     const { transactions } = useContext(ExpenseContext)
 
-    const amounts = transactions.map(transaction => transaction.amount)
+    const amounts = transactions.map(transaction => transaction.expense)
+    console.log(amounts);
     const total = amounts.reduce((prevState, currState) => (prevState += currState), 0).toFixed(2)
     return (
         <div>

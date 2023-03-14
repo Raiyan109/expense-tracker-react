@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Transaction = ({ id, type, amount }) => {
+const Transaction = ({ transaction }) => {
     return (
         <div>
-            <li> -{amount} -{type}</li>
+            <li> -{transaction.expense} </li>
         </div>
     );
 };
