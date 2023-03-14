@@ -12,7 +12,8 @@ const AddRemove = () => {
 
         const newTransaction = {
             id: Math.floor(Math.random() * 100000000),
-            expense: +expense
+            expense: +expense,
+            type: 'Add'
 
         }
         console.log(expense);

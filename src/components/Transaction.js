@@ -5,7 +5,7 @@ const Transaction = ({ transaction }) => {
     // const moment = moment().format('MMMM Do YYYY, h:mm:ss a');
     return (
         <div>
-            <li>{moment().format('MMMM Do YYYY dddd')} - {transaction.expense} </li>
+            <li>{moment().format('MMMM Do YYYY dddd')} - {transaction.expense} - {transaction.type}</li>
         </div>
     );
 };
