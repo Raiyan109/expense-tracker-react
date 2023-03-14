@@ -1,10 +1,7 @@
 import { createContext, useReducer } from "react";
 
 const initialValue = {
-    balance: 550,
-    transactions: [
-
-    ]
+    transactions: []
 }
 
 const AddReducer = (state, action) => {
