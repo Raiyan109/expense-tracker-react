@@ -5,7 +5,7 @@ const AddRemove = () => {
     const [expense, setExpense] = useState('')
 
     const { addTransaction } = useContext(ExpenseContext)
-
+    const { subtractTransaction } = useContext(ExpenseContext)
 
     const onSubmit = e => {
         e.preventDefault()
@@ -20,6 +20,19 @@ const AddRemove = () => {
         addTransaction(newTransaction)
     }
 
+    const onRemove = e => {
+        e.preventDefault();
+
+        const newTransaction = {
+            id: Math.floor(Math.random() * 100000000),
+            expense: +expense,
+            type: 'Remove'
+        }
+
+        console.log(expense);
+        subtractTransaction(newTransaction);
+    }
+
     return (
         <div>
             <form onSubmit={onSubmit}>
@@ -29,7 +42,7 @@ const AddRemove = () => {
                 />
                 <br />
                 <button onClick={onSubmit}>Add</button>
-                <button>Remove</button>
+                <button onClick={onRemove}>Remove</button>
             </form>
         </div>
     );
