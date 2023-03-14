@@ -4,7 +4,7 @@ const initialValue = {
     balance: 550,
     transactions: [
         { id: 1, amount: 200, type: 'Add' },
-        { id: 2, amount: 300, type: 'Remove' },
+        { id: 2, amount: 400, type: 'Remove' },
     ]
 }
 

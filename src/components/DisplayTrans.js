@@ -13,7 +13,7 @@ const DisplayTrans = () => {
             <ul style={{ marginTop: '20px' }}>
 
                 {transactions.map((transaction) => (
-                    <Transaction id={transaction.id} type={transaction.type} amount={transaction.amount}></Transaction>
+                    <Transaction key={transaction.id} type={transaction.type} amount={transaction.amount}></Transaction>
                 ))}
             </ul>
         </div>

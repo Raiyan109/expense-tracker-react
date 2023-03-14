@@ -7,15 +7,15 @@ import DisplayTrans from './DisplayTrans';
 const Home = () => {
     return (
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px' }}>
-            <main class="l-card">
-                <section class="l-card__text">
+            <main className="l-card">
+                <section className="l-card__text">
                     <Balance />
                     <AddRemove />
                 </section>
             </main>
 
-            <section class="l-card">
-                <section class="l-card__text">
+            <section className="l-card">
+                <section className="l-card__text">
                     <DisplayTrans />
                 </section>
             </section>
